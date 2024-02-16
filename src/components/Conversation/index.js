@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Stack, TextField} from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Header from "./Header";
 import Footer from "./Footer";
-import { styled, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
+import Message from "./Message";
 
 const Conversation = () => {
   const theme = useTheme();
@@ -12,10 +13,14 @@ const Conversation = () => {
       <Header />
 
       {/*Msg*/}
-      <Box width={"100%"} sx={{ flexGrow: 1 }}></Box>
+      <Box
+        width={"100%"}
+        sx={{ flexGrow: 1, height: "100%", overflow: "scroll" }}
+      >
+        <Message />
+      </Box>
       {/*Chat Footer */}
       <Footer />
-
     </Stack>
   );
 };
