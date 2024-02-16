@@ -1,9 +1,17 @@
-import React from 'react'
-import { Box } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import React, { useState } from 'react';
+import { Box, Divider, IconButton, Stack, Avatar } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
+import { Gear } from "phosphor-react";
+import { Nav_Buttons } from '../../data';
+import useSettings from '../../hooks/useSettings';
+import { faker } from "@faker-js/faker";
+import Logo from "../../assets/Images/chat-icon.png";
+import AntSwitch from '../../components/AntSwitch';
 
 const SideBar = () => {
-    const theme = useTheme
+    const theme = useTheme();
+    const [selected, setSelected] = useState(0);
+    const { onToggleMode } = useSettings();
   return (
     <Box
     p={2}
@@ -98,4 +106,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default SideBar;

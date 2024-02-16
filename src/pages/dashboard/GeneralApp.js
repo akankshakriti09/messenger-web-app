@@ -8,7 +8,7 @@ const GeneralApp = () => {
   const theme = useTheme();
   return (
     <Stack direction={"row"} sx={{ width: "100%" }}>
-      {/* Chats */}
+      {/* Chat */}
       <Chats />
 
       <Box
